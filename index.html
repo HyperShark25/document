@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<script src="script.js"></script>
+	<nav id="navbar" class="nav_bar">
+		<header><h1><i>Python Projects</i></h1></header>
+		<div class="link">
+			<a class="nav-link" href="#GUI">Graphical User Interface</a>
+			<a class="nav-link" href="#Weight_converter">Weight Converter</a>
+			<a class="nav-link" href="#Guess_number_game">Guess Number Game</a>
+			<a class="nav-link" href="#Roll_Dice_Game">Rolling Dice Game</a>
+			<a class="nav-link" href="#Car_Game">Car Game</a>
+		</div>
+	</nav>
+	<main id="main-doc">
+		<section id="GUI" class="main-section">
+			<header class="title">Tkinter</header>
+			<p class="skill-section">Graphical User Interface</p>
+			<p class="description">Using Tkinter library we can create a program that is used to
+			calculate gram, ounce and pound.
+			</p>
+			<div class="python">
+				<code>
+					from tkinter import *<br><br>
+
+					def x():<br>
+						&nbsp&nbsp&nbsp&nbspgram = float(y.get())*1000<br>
+						&nbsp&nbsp&nbsp&nbsppound=float(y.get())*2.20462<br>
+						&nbsp&nbsp&nbsp&nbspounce=float(y.get())*35.274<br>
+						&nbsp&nbsp&nbsp&nbspt1.delete(0.0,END)<br>
+						&nbsp&nbsp&nbsp&nbspt2.delete(0.0,END)<br>
+						&nbsp&nbsp&nbsp&nbspt3.delete(0.0,END)<br>
+						&nbsp&nbsp&nbsp&nbspt1.insert(END,str(gram)+" gram")<br>
+						&nbsp&nbsp&nbsp&nbspt2.insert(END,str(pound)+ " pound")<br>
+						&nbsp&nbsp&nbsp&nbspt3.insert(END,str(ounce)+" ounce")<br>
+						&nbsp&nbsp&nbsp&nbspe.delete(0,END)<br><br><br>
+
+					win=Tk()<br>
+					y=StringVar()<br>
+					lab=Label(win, text="Kg")<br>
+					lab.grid(row=0)<br>
+					e=Entry(win, textvariable=y)<br>
+					e.grid(row=0, column=1)<br>
+					b=Button(win, text="Convert", command=x)<br>
+					b.grid(row=0, column=2)<br>
+					t1=Text(win, height=1, width=20)<br>
+					t1.grid(row=1)<br>
+					t2=Text(win, height=1, width=20)<br>
+					t2.grid(row=1, column=1)<br>
+					t3=Text(win, height=1, width=20)<br>
+					t3.grid(row=1, column=2)<br>
+					win.mainloop()<br>
+				</code>
+			</div>
+			<!-- <li>First List:</li> -->
+		</section>
+		<section id="Weight_converter" class="main-section">
+			<header class="title">Weight Converter</header>
+			<p class="skill-section">Calculate Weight</p>
+			<p class="description">Using if conditions we can convert the weight in kilogram unit to
+			gram unit and vice versa.
+			</p>
+			<div class="python">
+				<code><br>
+					weight = int(input("Weight: "))<br><br>
+					unit = input("(L)bs or (K)gm: ")<br><br>
+					converted1 = weight * 0.45<br><br>
+					converted2 = weight / 0.45<br><br>
+					if unit.lower() == "l":<br>
+						&nbsp&nbsp&nbsp&nbspprint(f"You are {converted1} kilogram.")<br>
+					elif unit.lower() == "k":<br>
+						&nbsp&nbsp&nbsp&nbspprint(f"You are {converted2} pounds.")<br>
+				</code>
+			</div>
+			<!-- <li>Second List:</li> -->
+		</section>
+		<section id="Guess_number_game" class="main-section">
+			<header class="title">Guess number game</header>
+			<p class="skill-section">Guessing game</p>
+			<p class="description">By utilizing while conditions with if conditions we can create a
+			guessing game that provides the user only 3 tries in order to succeed.
+			</p>
+			<div class="python">
+				<code><br>
+					secret = 7<br>
+					guesses = 0<br>
+					limit = 3<br><br>
+					while guesses < limit:<br>
+						&nbsp&nbsp&nbsp&nbspMy_count = int(input(f"Guess: "))<br>
+						&nbsp&nbsp&nbsp&nbspguesses += 1<br>
+						&nbsp&nbsp&nbsp&nbspif My_count == secret:<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("Congratulations!")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("You won!")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak<br>
+					&nbsp&nbsp&nbsp&nbspelse:<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("sorry, you lost.")<br>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("Better luck next time 😕")<br>
+				</code>
+			</div>
+			<!-- <li>Third List:</li> -->
+		</section>
+		<section id="Roll_Dice_Game" class="main-section">
+			<header class="title">Rolling Dice game</header>
+			<p class="skill-section">Executing Functions</p>
+			<p class="description">By importing a library in python called random, we can use it to
+			create a random number made up totally by the computer.
+			</p>
+			<div class="python">
+				<code>
+					import random<br><br><br>
+
+					class Dice:<br>
+						&nbsp&nbsp&nbsp&nbspdef roll(self):<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfirst = random.randint(1, 6)<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsecond = random.randint(1, 6)<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn first, second<br><br><br>
+
+					dice = Dice()<br>
+					&nbsp&nbsp&nbsp&nbspprint(dice.roll())<br>
+
+				</code>
+			</div>
+			<!-- <li>Fourth List:</li> -->
+		</section>
+		<section id="Car_Game" class="main-section">
+			<header class="title">Car Game</header>
+			<p class="skill-section">Interactive Car game</p>
+			<p class="description">A program that provides way to interact with the user by providing
+				only 3 tries for using nitro boost and providing support each time the car is stopped
+				or the program gets terminated.
+			</p>
+			<div class="python car">
+				<code>
+					command = ""<br>
+					NOB = 0<br>
+					limit = 3<br>
+					system = True<br>
+					print("Good morning and welcome to the Racing Speedy Vehicle!")<br>
+					print("Make sure to prepare yourself for what's about to come!")<br>
+					name = input("What's your name adventurer🧑?")<br>
+					print(f"Welcome aboard {name}.")<br>
+					vehicle = input("which vehicle would you like to choose today?")<br>
+					print("Very well, all done.")<br>
+					print("Now get out there and show us what you are really made of!")<br>
+					started = False<br><br>
+					while system is True:<br>
+						&nbsp&nbsp&nbsp&nbspcommand = input(">").lower()<br>
+						&nbsp&nbsp&nbsp&nbspif command == "start":<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif started:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"{name}, You have already started the {vehicle}!")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"{vehicle} started...")<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNOB = 0<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstarted = True<br>
+						&nbsp&nbsp&nbsp&nbspelif command == "stop":<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif not started:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"{name}, the {vehicle} is already stopped!")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"...{vehicle} stopped")<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstarted = False<br>
+						&nbsp&nbsp&nbsp&nbspelif command == "boost":<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif not started:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"{name}, You cannot activate the boost while the {vehicle} is stopped!")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwhile NOB < limit:<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("Boost activated ⚡⚡⚡")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"remember {name}, safety comes first, so be careful out there.")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNOB += 1<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"You cannot activate the boost more than 3 times {name}!")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"in order to activate it again, you have to stop the {vehicle}.")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("So that it can recharge itself.")<br>
+						&nbsp&nbsp&nbsp&nbspelif command == "help":<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"""<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress start_to start the {vehicle}.<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress stop_to stop the {vehicle}.<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress boost_to boost the {vehicle}.(WARNING: You can activate the boost 3 times per round!)<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress quit_to quit.<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp""")<br>
+						&nbsp&nbsp&nbsp&nbspelif command == "quit":<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsystem = False<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwhile system is False:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdecision = input(f"""<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAre you sure you want to quit,{name}?<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress Y for yes<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppress N to go back<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp""").upper()<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif decision == "Y":<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("You quit")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelif decision == "N":<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsystem = True<br>
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("""<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSorry I don't understand that!<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspplease try again""")<br>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsystem = False<br>
+						&nbsp&nbsp&nbsp&nbspelse:<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint(f"Sorry {name}, I don't understand that")<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint("Could you try again?")<br>
+
+				</code>
+			</div>
+			<!-- <li>Fifth List:</li> -->
+		</section>
+	</main>
+</body>
+</html>
